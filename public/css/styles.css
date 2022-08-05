@@ -80,7 +80,7 @@ h1{
   font-size: 2rem;
   font-weight: 800;
   color: black;
-  
+
 
 
 }
@@ -116,4 +116,35 @@ margin-top:5%;
   width:30%;
   height:7%;
 margin:0% 2%;
+}
+/* certificate */
+/* build your own custom Bootstrap theme:
+   https://themestr.app
+*/
+.temp8{
+    padding:4%;
+    text-align:center;
+
+}
+#certificate{
+    text-align:center;
+}
+.temp7{
+  font-family: "Pacifico";
+  font-size:2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom:3%;
+}
+.portfolio-item{
+    margin-bottom:30px;
+    text-align:center;
+}
+p{
+  font-family:"Source Sans Pro";
+}
+a{
+  color:black;
+    font-family:"Pacifico";
+    text-decoration: none;
 }
