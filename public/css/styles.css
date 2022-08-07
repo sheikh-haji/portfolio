@@ -5,7 +5,15 @@
     /* color:#fff; */
 
 }
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+    .my_container{
+
+      padding-bottom: 300px !important; //example
+
+    }
+}
 #footer{
+  position: absolute;
     background-color: #6aa84f;
     color:black;
     font-family: Pacifico;
@@ -13,9 +21,9 @@
     padding: 0% 15%;
     /* margin: 15% 0%; */
     /* height: 200px; */
-    height: 3%;
+    height: 15%;
+    width: 100%;
 }
-
 h1{
   font-family: "Pacifico";
   font-size:2.5rem;
