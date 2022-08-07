@@ -5,11 +5,21 @@
     /* color:#fff; */
 
 }
+#footer{
+    background-color: #6aa84f;
+    color:black;
+    font-family: Pacifico;
+    text-align: center;
+    padding: 0% 15%;
+    /* margin: 15% 0%; */
+    /* height: 200px; */
+    height: 3%;
+}
 
 h1{
   font-family: "Pacifico";
   font-size:2.5rem;
-  font-weight: 800;
+  font-weight:800;
   line-height: 1;
 
 }
@@ -28,7 +38,7 @@ h1{
 .nav-item{
   font-family:"Source Sans Pro";
   font-size: 1.2rem;
-  padding:0 10px;
+  padding:0 5px;
 }
 .container-fluid{
   padding: 3% 15%;
@@ -135,6 +145,7 @@ margin:0% 2%;
   font-weight: 800;
   line-height: 1;
   margin-bottom:3%;
+  text-align:center;
 }
 .portfolio-item{
     margin-bottom:30px;
@@ -147,4 +158,27 @@ a{
   color:black;
     font-family:"Pacifico";
     text-decoration: none;
+}
+.temp9{
+  font-family: "Pacifico";
+  font-size:2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom:3%;
+  text-decoration:underline;
+  text-align:center;
+}
+
+.temp8{
+    padding:4%;
+
+   text-align: left;
+}
+#project{
+    background-color:#6aa84f;
+}
+.temp10{
+    font-family:"Pacifico";
+    color: white;
+    font-size: 2rem;
 }
