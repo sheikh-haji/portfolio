@@ -30,6 +30,20 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
  <script src='https://unpkg.com/mapbox@1.0.0-beta9/dist/mapbox-sdk.min.js'></script>
+ <script>
+ // collapses the navigation bar after click event in navigation bar
+  jQuery(document).ready(function($) {
+      $('.navbar-nav li a').on("click", function() {
+          console.log("menu clicked");
+          $('button.navbar-toggler').click();
+      });
+  });
+</script>
+<script>
+function func(e){
+$(e.currentTarget).trigger("blur");
+}
+</script>
 </head>
 <body>
   <!-- <h1>SHEIKH AMEENUL HAJI</h1> -->
@@ -76,9 +90,9 @@
 
           <h1 class="pt-2 me-3 pe-1">I am an enthusiastic student who is eager to learn and interested in web development. I have a huge thirst to learn , explore and experiment with new technologies.</h1>
           <h3 class="temp4">My Profile</h3>
-          <a  class="btn btn-outline-light btn-lg  mt-3 me-4" href="https://leetcode.com/sheikhhaji18/" target="_blank"><i class="fa-solid fa-code me-2"></i>LeetCode</a>
-          <a type="button" class="btn btn-outline-light btn-lg  mt-3 me-4" href="https://auth.geeksforgeeks.org/user/sheikhhaji18/profile" target="_blank"><i class="fa-solid fa-code me-2"></i>GFG</a>
-          <a type="button" class="btn btn-outline-light btn-lg mt-3 me-3 " href="https://github.com/sheikh-haji" target="_blank"><i class="fa-brands fa-github me-2"></i>Github</a>
+          <a  class="btn btn-outline-light btn-lg  mt-3 me-4" href="https://leetcode.com/sheikhhaji18/" target="_blank" onclick="func(event)"><i class="fa-solid fa-code me-2"></i>LeetCode</a>
+          <a type="button" class="btn btn-outline-light btn-lg  mt-3 me-4" href="https://auth.geeksforgeeks.org/user/sheikhhaji18/profile" target="_blank" onclick="func(event)"><i class="fa-solid fa-code me-2"></i>GFG</a>
+          <a type="button" class="btn btn-outline-light btn-lg mt-3 me-3 " href="https://github.com/sheikh-haji" target="_blank" onclick="func(event)"><i class="fa-brands fa-github me-2" ></i>Github</a>
 
         </div>
         <div class='col-lg-6 col-md-12'>
@@ -168,7 +182,7 @@
   <section id="hobbies">
     <h1 class="temp5 my-3">Hobbies</h1>
     <h2 class="temp6">Driving,Bikes,Cars</h2>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="true" >
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
       <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active " aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -224,10 +238,10 @@
         </div>
         <div class="col-lg-4 col-md-6 portfolio-item">
           <div class="card h-100">
-            <a href="https://www.udemy.com/certificate/UC-82a8530a-68c7-4d12-baf8-36a055fcf8f2/" target="_blank"><img class="card-img-top" src="/images/cer2.jpg" alt=""></a>
+            <a href="https://www.udemy.com/certificate/UC-f318cd2a-c48a-4e88-9ab3-77e1b028f244/" target="_blank"><img class="card-img-top" src="/images/cer2.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="https://www.udemy.com/certificate/UC-82a8530a-68c7-4d12-baf8-36a055fcf8f2/" target="_blank">Udemy,Web Development Course</a>
+                <a href="https://www.udemy.com/certificate/UC-f318cd2a-c48a-4e88-9ab3-77e1b028f244/" target="_blank">Udemy,Web Development Course</a>
               </h4>
               <p class="card-text">
                 Completed the Web Development Course provided by Udemy.
@@ -297,10 +311,10 @@
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">It uses Mapbox API to locate the user's location and custom Location by given by the user.</li>
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">This project is mostly based on asynchronous programming (all the api calls are asynchronous that await and async function).</li>
             </ul>
-          <a class="btn btn-dark me-3" href="https://glacial-shore-51498.herokuapp.com/" target="_blank" style="font-family:Pacifico;font-size:1.2rem;">Web App
+          <a class="btn btn-dark me-3" href="https://glacial-shore-51498.herokuapp.com/" target="_blank" style="font-family:Pacifico;font-size:1.2rem;" onclick="func(event)">Web App
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
-          <a class="btn btn-dark" href="https://github.com/sheikh-haji/Weather-App-flutter" target="_blank" style="font-family:Pacifico;font-size:1.2rem;">Flutter App
+          <a class="btn btn-dark" href="https://github.com/sheikh-haji/Weather-App-flutter" target="_blank" style="font-family:Pacifico;font-size:1.2rem;" onclick="func(event)">Flutter App
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
@@ -316,10 +330,10 @@
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">In Web App,the project has been integrated with open auth authencation with google and facebook and also local authentication.</li>
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">In flutter app, concept of state management is used because the data has to be accessed across different stages of the app.</li>
             </ul>
-          <a class="btn btn-dark me-3" href="https://todolistcegchennai.herokuapp.com/" target="_blank" style="font-family:Pacifico;font-size:1.2rem;">Web App
+          <a class="btn btn-dark me-3" href="https://todolistcegchennai.herokuapp.com/" target="_blank" style="font-family:Pacifico;font-size:1.2rem;" onclick="func(event)">Web App
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
-          <a class="btn btn-dark" href="https://github.com/sheikh-haji/ToDoListFlutter" target="_blank" style="font-family:Pacifico;font-size:1.2rem;">Flutter App
+          <a class="btn btn-dark" href="https://github.com/sheikh-haji/ToDoListFlutter" target="_blank" style="font-family:Pacifico;font-size:1.2rem;" onclick="func(event)">Flutter App
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
         </div>
@@ -335,7 +349,7 @@
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">It uses google maps,to find the nearest hospital to the user's location using Places,Servies,Geolocator API provided by google maps.</li>
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">It also gives remedy to the disease given as input and this remedy is stored in a NoSQL database.</li>
             </ul>
-          <a class="btn btn-dark me-3" href="https://github.com/sheikh-haji/Disease-Classification-Using-ML-Model" target="_blank" style="font-family:Pacifico;font-size:1.2rem;">  View Project
+          <a class="btn btn-dark me-3" href="https://github.com/sheikh-haji/Disease-Classification-Using-ML-Model" target="_blank" style="font-family:Pacifico;font-size:1.2rem;" onclick="func(event)">  View Project
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
 
@@ -352,7 +366,7 @@
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">Whenever a object within a threshold distance is detected the lid of the dustbin opens up.</li>
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">The obstacle is detected by Ultrasonic motion sensor and the lid is lifted up by servo motor.</li>
             </ul>
-          <a class="btn btn-dark me-3" href="https://github.com/sheikh-haji/Smart-Dustbin" target="_blank" style="font-family:Pacifico;font-size:1.2rem;">  View Project
+          <a class="btn btn-dark me-3" href="https://github.com/sheikh-haji/Smart-Dustbin" target="_blank" style="font-family:Pacifico;font-size:1.2rem;" onclick="func(event)">  View Project
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
 
@@ -370,7 +384,7 @@
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">Dijkstra Algorithm is then applied to the processed Graph.</li>
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">Then shortest path between the source and destination is stimulated and shown. </li>
             </ul>
-          <a class="btn btn-dark me-3" href="https://github.com/sheikh-haji/Simulation-of-Dijstra-Algorithm" target="_blank" style="font-family:Pacifico;font-size:1.2rem;">  View Project
+          <a class="btn btn-dark me-3" href="https://github.com/sheikh-haji/Simulation-of-Dijstra-Algorithm" target="_blank" style="font-family:Pacifico;font-size:1.2rem;" onclick="func(event)">  View Project
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
 
@@ -390,14 +404,14 @@
     <h1 style="font-family:Pacifico;text-align:center;font-size:3rem;margin-top:3%;font-weight:bold;">education</h1>
      <div class="col-lg-6 col-md-12">
        <h1 style="font-family:Pacifico;text-align:center;font-size:2rem;margin:5%0%;font-weight:100;">
-         <a href="https://ceg.annauniv.edu/" target="_blank" style="text-decoration:none;color:black;">College of Engineering,Guindy</a></h1>
+         <a href="https://ceg.annauniv.edu/" target="_blank" style="text-decoration:none;color:black;" onclick="func(event)">College of Engineering,Guindy</a></h1>
 
          <div id='map'  style="margin-left:5%;width:90%;height:300px;padding:auto;text-align:center;  margin-bottom:30px;" ></div>
 
      </div>
 
      <div class="col-lg-6 col-md-12 "  >
-          <h1 style="font-family:Pacifico;text-align:center;font-size:2rem;margin:5%0%;font-weight:normal">
+          <h1 style="font-family:Pacifico;text-align:center;font-size:2rem;margin:5%0%;font-weight:normal" onclick="func(event)">
             <a href="https://avadicrpf.kvs.ac.in/" target="_blank" style="text-decoration:none;color:black;" >Kendriya Vidyalaya,Avadi</a></h1>
          <div id='map1'  style="margin-left: 5%;width:90%; height: 300px;padding: auto;text-align:center;  margin-bottom:30px;"></div>
 
@@ -450,9 +464,9 @@
 <section id="footer">
   <div class="container" >
 
-    <a href="https://www.linkedin.com/in/sheikh-ameenul-h-b09a4512b/" target="_blank"><i class="social-icon fab fa-linkedin mx-2 mt-4"  ></i></a>
+    <a href="https://www.linkedin.com/in/sheikh-ameenul-h-b09a4512b/" target="_blank" onclick="func(event)"><i class="social-icon fab fa-linkedin mx-2 mt-4"  ></i></a>
 
-    <a href="mailto:sheikhhaji18@gmail.com"><i class="social-icon fas fa-envelope mx-2" ></i></a>
+    <a href="mailto:sheikhhaji18@gmail.com"><i class="social-icon fas fa-envelope mx-2" onclick="func(event)"></i></a>
     <p class="mt-3" style="font-family:Pacifico;padding:0%0%">© Ceg,Chennai</p>
   </div>
 </section>
