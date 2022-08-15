@@ -92,7 +92,7 @@ $(e.currentTarget).trigger("blur");
           <h3 class="temp4">My Profile</h3>
           <a  class="btn btn-outline-light btn-lg  mt-3 me-4" href="https://leetcode.com/sheikhhaji18/" target="_blank" onclick="func(event)"><i class="fa-solid fa-code me-2"></i>LeetCode</a>
           <a type="button" class="btn btn-outline-light btn-lg  mt-3 me-4" href="https://auth.geeksforgeeks.org/user/sheikhhaji18/profile" target="_blank" onclick="func(event)"><i class="fa-solid fa-code me-2"></i>GFG</a>
-          <a type="button" class="btn btn-outline-light btn-lg mt-3 me-3 " href="https://github.com/sheikh-haji" target="_blank" onclick="func(event)"><i class="fa-brands fa-github me-2" ></i>Github</a>
+          <a type="button" class="btn btn-outline-light btn-lg mt-3 me-3 " href="https://github.com/sheikh-haji" target="_blank" onclick="this.blur();"><i class="fa-brands fa-github me-2" ></i>Github</a>
 
         </div>
         <div class='col-lg-6 col-md-12'>
@@ -402,7 +402,7 @@ $(e.currentTarget).trigger("blur");
  <div class="container" >
    <div class="row mx-3" style="height:600px">
     <h1 style="font-family:Pacifico;text-align:center;font-size:3rem;margin-top:3%;font-weight:bold;">education</h1>
-     <div class="col-lg-6 col-md-12">
+     <div class="col-lg-6 col-md-12 " style="border-right:3px solid;">
        <h1 style="font-family:Pacifico;text-align:center;font-size:2rem;margin:5%0%;font-weight:100;">
          <a href="https://ceg.annauniv.edu/" target="_blank" style="text-decoration:none;color:black;" onclick="func(event)">College of Engineering,Guindy</a></h1>
 
@@ -411,9 +411,13 @@ $(e.currentTarget).trigger("blur");
      </div>
 
      <div class="col-lg-6 col-md-12 "  >
-          <h1 style="font-family:Pacifico;text-align:center;font-size:2rem;margin:5%0%;font-weight:normal" onclick="func(event)">
-            <a href="https://avadicrpf.kvs.ac.in/" target="_blank" style="text-decoration:none;color:black;" >Kendriya Vidyalaya,Avadi</a></h1>
-         <div id='map1'  style="margin-left: 5%;width:90%; height: 300px;padding: auto;text-align:center;  margin-bottom:30px;"></div>
+
+
+
+            <h1 style="font-family:Pacifico;text-align:center;font-size:2rem;margin:5%0%;font-weight:normal" onclick="func(event)">
+              <a href="https://avadicrpf.kvs.ac.in/" target="_blank" style="text-decoration:none;color:black;" >Kendriya Vidyalaya,Avadi</a></h1>
+           <div id='map1'  style="margin-left: 5%;width:90%; height: 300px;padding: auto;text-align:center;  margin-bottom:30px;"></div>
+
 
      </div>
 
@@ -435,7 +439,15 @@ $(e.currentTarget).trigger("blur");
    });
    const nav = new mapboxgl.NavigationControl({visualizePitch: true});
   map.addControl(nav, 'top-left');
-  new mapboxgl.Marker({ color: 'red', rotation: -10 }).setLngLat(coordinates).addTo(map);
+  var marker=new mapboxgl.Marker({ color: 'red', rotation: -10 }).setLngLat(coordinates);
+  marker.addTo(map);
+
+map.on('click', (e) => {
+console.log('A click event has occurred at ${e.lngLat}');
+  map.center(coordinates);
+
+
+});
  </script>
  <script>
 
