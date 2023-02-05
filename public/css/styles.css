@@ -5,12 +5,21 @@
     /* color:#fff; */
 
 }
+.marker {
+  background-image: url('../images/kinaxis.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 @media only screen and (min-width: 120px) and (max-width: 991px) {
     .my_container{
 
       padding-bottom: 400px !important; //example
 
     }
+  
 }
 #footer{
   position: absolute;
