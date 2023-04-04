@@ -403,9 +403,9 @@ $(e.currentTarget).trigger("blur");
     </div>
 </section>
 <section id="education">
-
+  
   <div class="container">
-    <div class="row mx-3" style="height:600px ">
+    <div class="row mx-3" style="height:600px;border-bottom:3px solid; ">
       <h1 style="font-family:Pacifico;text-align:center;font-size:3rem;margin-top:3%;font-weight:bold;">Education & Experience</h1>
   
     
@@ -414,7 +414,15 @@ $(e.currentTarget).trigger("blur");
 
         <h1 style="font-family:Pacifico;text-align:center;font-size:2rem;font-weight:normal" onclick="func(event)">
           <a href="https://www.kinaxis.com/en" target="_blank" style="text-decoration:none;color:black;" >Intern At Kinaxis</a></h1>
-       <div id='map2'  style="margin-left: 20%;width:60%; height: 300px;text-align:center;  "></div>
+       <!-- <div id='map2'  style="margin-left: 20%;width:60%; height: 300px;text-align:center;  "></div> -->
+       
+        
+            <iframe  style="height:70%;padding-right:10%;padding-left:10%;" src="https://maps.google.com/maps?q=kinaxis,world trade center chennai&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+            </iframe> 
+            
+           
+        
+    </div>
        <div class="row mx-3 px-3" style="height:3px; margin:0%10%;background-color:black;"></div>
   
   
@@ -430,8 +438,11 @@ $(e.currentTarget).trigger("blur");
        <h1 style="font-family:Pacifico;text-align:center;font-size:2rem;margin:5%0%;font-weight:100;">
          <a href="https://ceg.annauniv.edu/" target="_blank" style="text-decoration:none;color:black;" onclick="func(event)">College of Engineering,Guindy</a></h1>
 
-         <div id='map'  style="margin-left:5%;width:90%;height:300px;text-align:center;  margin-bottom:30px;" ></div>
-
+         <!-- <div id='map'  style="margin-left:5%;width:90%;height:300px;text-align:center;  margin-bottom:30px;" ></div> -->
+         <iframe  style="height:70%;padding-right:10%;padding-left:10%;width:100%" src="https://maps.google.com/maps?q=college of engineering guindy&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
+      
+      
      </div>
 
      <div class="col-lg-6 col-md-12 "  >
@@ -440,8 +451,10 @@ $(e.currentTarget).trigger("blur");
 
             <h1 style="font-family:Pacifico;text-align:center;font-size:2rem;margin:5%0%;font-weight:normal" onclick="func(event)">
               <a href="https://avadicrpf.kvs.ac.in/" target="_blank" style="text-decoration:none;color:black;" >Kendriya Vidyalaya,Avadi</a></h1>
-           <div id='map1'  style="margin-left: 5%;width:90%; height: 300px;text-align:center;  margin-bottom:30px;"></div>
-
+           <!-- <div id='map1'  style="margin-left: 5%;width:90%; height: 300px;text-align:center;  margin-bottom:30px;"></div> -->
+           <iframe  style="height:70%;padding-right:10%;padding-left:10%;width:100%" src="https://maps.google.com/maps?q=kendriya vidyalaya crpf avadi&t=&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+          </iframe>
+          <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="770" height="510" id="gmap_canvas" src="" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:510px;width:770px;}</style><a href="https://embedgooglemap.2yu.co">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:510px;width:770px;}</style></div></div> -->
 
      </div>
 
@@ -450,7 +463,7 @@ $(e.currentTarget).trigger("blur");
 
 
  </div>
- <script>
+<script>
    mapboxgl.accessToken ="pk.eyJ1Ijoic2hlaWtoMTE4IiwiYSI6ImNsNWtwaWJlbjBhaTEzcGp2M21vYXk0amEifQ.WWwrnJ23ZEs7RsEGY5Ywig";
  var client = new MapboxClient(mapboxgl.accessToken);
  var coordinates = [ 80.23537517963119,13.012648532264558 ];
