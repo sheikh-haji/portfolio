@@ -49,27 +49,15 @@ function func(e){
 $(e.currentTarget).trigger("blur");
 }
 </script>
-<style>
-  /*  Rollover image styles  */
-  .figure {
-    position: relative;
-    width: 360px; /* can be omitted for a regular non-lazy image */
-    max-width: 100%;
-  }
-  .figure img.Sirv.image-hover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    object-fit: contain;
-    opacity: 0;
-    transition: opacity .2s;
-  }
-  .figure:hover img.Sirv.image-hover {
-    opacity: 1;
-  }
-</style>
+<script>
+  function hover(element) {
+  element.setAttribute('src', 'images/sheikh11.png');
+}
+
+function unhover(element) {
+  element.setAttribute('src', 'images/sheikh4.png');
+}
+</script>
 </head>
 <body>
   <!-- <h1>SHEIKH AMEENUL HAJI</h1> -->
@@ -133,12 +121,12 @@ $(e.currentTarget).trigger("blur");
 
           <!-- <img class="title-image ms-5 ps-5" height="auto"  src="images/sheikh10.png" alt="iphone-mockup"> -->
           
-          <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+          <!-- <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
           <div class="figure">
             <img class="Sirv image-main" src="hmages/sheikh4.png" data-src="images/sheikh4.png">
-            <img class="Sirv image-hover" data-src="images/sheikh10.png">
-          </div>
-          
+            <img class="Sirv image-hover" data-src="images/sheikh11.png">
+          </div> -->
+          <img id="my-img" src="images/sheikh4.png" height="auto" width="80%" onmouseover="hover(this);" onmouseout="unhover(this);" />
         </div>
 
 
