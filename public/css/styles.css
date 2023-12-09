@@ -9,6 +9,7 @@
 
 
 
+
 .mapboxgl-popup {
   max-width: 200px;
 }
@@ -219,7 +220,7 @@ a{
     font-size: 2rem;
 }
 h1#title {
-  color: hsl(0, 0%, 28%);
+  color: hsl(0, 0%, 0%);
   font-size: 50px;
   font-weight: normal;
   font-family: pacifico;
