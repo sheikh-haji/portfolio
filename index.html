@@ -58,6 +58,19 @@ $(e.currentTarget).trigger("blur");
 function unhover(element) {
   element.setAttribute('src', 'images/sheikh4.png');
 }
+var progressBar = $('.progress-bar');
+var percentVal = 0;
+
+window.setInterval(function(){
+    percentVal += 10;
+    progressBar.css("width", percentVal+ '%').attr("aria-valuenow", percentVal+ '%').text(percentVal+ '%'); 
+
+    if (percentVal == 100)
+    {
+        percentVal = 0;      
+    }
+
+}, 500);
 </script>
 </head>
 <body>
@@ -170,7 +183,7 @@ function unhover(element) {
           <div class="my-3 ms-2 me-2 pe-2">
             <label style="font-family:Source Sans Pro;font-size: 1.2rem;"><b>Web Development</b>(Nodejs,EJS,API'S,hosting)</label>
             <div class="progress mt-1 h-1">
-              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 60% " aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped bg-success progress-bar-animated active" role="progressbar" style="width: 60% " aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
                 <div class="temp2">60%</div>
               </div>
             </div>
@@ -544,7 +557,7 @@ function unhover(element) {
             <li style="font-family:Source Sans Pro;font-size:1.2rem;color:white;">It also gives remedy to the disease given as input and this remedy is stored in a NoSQL database.</li>
             </ul>
           <a class="btn btn-dark me-3" href="https://github.com/sheikh-haji/Disease-Classification-Using-ML-Model" target="_blank" style="font-family:Pacifico;font-size:1.2rem;" onclick="func(event)">  View Project
-            <a class="btn btn-dark me-3" href="http://15.207.197.57:8080/" target="_blank" style="font-family:Pacifico;font-size:1.2rem;" onclick="func(event)">  Webapp
+            <a class="btn btn-dark me-3" href="http://15.207.197.57:8081/" target="_blank" style="font-family:Pacifico;font-size:1.2rem;" onclick="func(event)">  Webapp
             
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
