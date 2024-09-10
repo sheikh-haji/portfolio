@@ -333,18 +333,21 @@ h2#title {
 
 .temp20 .row::before {
   content: '';
-  position: absolute;
-  left: 5px; /* Position the circle on the vertical line */
-  top: 15px;
-  width: 20px;
-  height: 20px;
+  position:relative;
+  left: 0px; /* Position the circle on the vertical line */
+  top: 30px;
+  width: 25px;
+  height: 25px;
+  
   background-color: red; /* Color of the dot - red */
   border: 2px solid black; /* Border of the dot - black */
   border-radius: 50%; /* Makes the dot circular */
+  transform: translateX(-50%);
   z-index: 1;
+  
 }
 
 /* Adjust the position of the content relative to the timeline */
 .temp20 .row {
-  padding-left: 40px; /* Push the content away from the line and dot */
+  padding-left: 50px; /* Push the content away from the line and dot */
 }
