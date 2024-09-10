@@ -208,6 +208,7 @@ margin:0% 2%;
     text-align:center;
 
 }
+
 #certificate{
     text-align:center;
 }
@@ -305,4 +306,45 @@ h2#title {
 @keyframes animated-cursor{
   from{border-right-color: rgba(0,255,0,.75);}
   to{border-right-color: transparent;}
+}
+/* Container holding the timeline */
+.temp20 {
+  position: relative;
+  padding-left: 40px; /* Space for the vertical line */
+  border-left: 2px solid black; /* The vertical timeline - black */
+}
+
+.temp20::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: black; /* Color of the vertical line - black */
+}
+
+/* Circle at each experience point */
+.temp20 .row {
+  position: relative;
+  padding-left: 40px; /* Space for the dot and text */
+  margin-bottom: 30px; /* Adjusts space between each experience */
+}
+
+.temp20 .row::before {
+  content: '';
+  position: absolute;
+  left: 5px; /* Position the circle on the vertical line */
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  background-color: red; /* Color of the dot - red */
+  border: 2px solid black; /* Border of the dot - black */
+  border-radius: 50%; /* Makes the dot circular */
+  z-index: 1;
+}
+
+/* Adjust the position of the content relative to the timeline */
+.temp20 .row {
+  padding-left: 40px; /* Push the content away from the line and dot */
 }
