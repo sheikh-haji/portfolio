@@ -19,7 +19,9 @@ app.get("/", function(req, res){
   // res.render("home");
   res.sendFile(__dirname+"/index.html");
 });
-
+app.get("/secure", function(req, res){
+  res.sendFile(__dirname+"/secure.html");
+});
 
 app.get("/contact", function(req, res){
   res.render("contact");
