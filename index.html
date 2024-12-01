@@ -85,6 +85,25 @@ window.setInterval(function(){
 
 
 </script>
+<style>
+  .word-animation {
+      display: inline-block;
+    font-size: 2.2rem;
+    font-family: "Vina Sans";
+    text-align: center; 
+    overflow: hidden;
+    margin-top: 5%;
+    white-space: pre;
+    border-right: 2px solid #000;
+    animation: blink 0.5s step-end infinite alternate; /* animation: typing 2s steps(30, end), blink 0.5s step-end infinite alternate; */
+   
+  }
+
+  @keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  }
+</style>
 </head>
 <body>
   
@@ -137,9 +156,40 @@ window.setInterval(function(){
           <!-- <h1 class="pt-2 me-3 pe-1" style="font-family:Vina Sans;font-weight:normal;">I am an enthusiastic person who is eager to learn and interested in web Development. I have a huge thirst to learn , explore and experiment with new technologies.</h1> -->
           <h2 id="title">I'm a motivated person who loves tackling </h2> 
 <h2 id="title"> new challenges and learning new </h2>
-<h2 id="title"> technology. I'm looking for a role where I can  </h2> 
+<h2 id="title"> tech.I'm looking for a role where I can  </h2> 
 <h2 id="title">grow both personally and professionally  while </h2>
 <h2 id="title">enjoying problem-solving with a great team.</h2>
+
+<p style=" margin-top:5%;margin-left:10%; display: inline-block;font-size: 2.6rem;font-family:Vina Sans;"><span id="changing-text" class="word-animation"></span></p>
+<script>
+  const words = ["Mobile dev enthusiast", "Web dev enthusiast", "Deep learning enthusiast"];
+const textElement = document.getElementById("changing-text");
+let wordIndex = 0;
+let charIndex = 0;
+
+function typeWord() {
+  if (charIndex < words[wordIndex].length) {
+    textElement.textContent = " " + words[wordIndex].slice(0, charIndex + 1); // Add leading space
+    charIndex++;
+    setTimeout(typeWord, 100); // Type next character
+  } else {
+    setTimeout(deleteWord, 1000); // Wait before deleting the word
+  }
+}
+
+function deleteWord() {
+  if (charIndex > 0) {
+    textElement.textContent = " " + words[wordIndex].slice(0, charIndex - 1); // Add leading space
+    charIndex--;
+    setTimeout(deleteWord, 100); // Delete next character
+  } else {
+    wordIndex = (wordIndex + 1) % words.length; // Move to the next word
+    setTimeout(typeWord, 500); // Wait before typing the next word
+  }
+}
+
+typeWord(); // Start the animation
+</script>
           <!-- <h3 class="temp4" style="font-family:Vina Sans;font-weight:normal;">My Profile</h3> -->
           <!-- <div class="badge-base LI-profile-badge " data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="sheikhhaji" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/sheikhhaji?trk=profile-badge"></a></div> -->
               
