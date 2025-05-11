@@ -108,6 +108,13 @@
       transform: scale(1.2);
   }
 }
+#changing-text {
+  display: inline-block;
+  min-width: 300px; /* adjust based on your longest phrase */
+  white-space: nowrap;
+   min-height: 1.2em; /* roughly the height of one line of text */
+  line-height: 1.2;
+}
 
 #scale-animation {
   padding-top: 5%;
