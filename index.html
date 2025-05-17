@@ -187,21 +187,30 @@ function deleteWord() {
     setTimeout(typeWord, 500); // Wait before typing the next word
   }
 }
- window.onload = function () {
-      const imgElement = document.getElementById("my-img");
+ 
+  window.onload = function () {
+    const imgElement = document.getElementById("my-img");
 
-      const img1 = "images/sheikh11.png";
-      const img2 = "images/sheikh4.png";
+    const img1 = "images/sheikh11.png";
+    const img2 = "images/sheikh4.png";
+    const img3 = "images/sheikh13.png";
 
-      let current = 1;
+    const images = [img1, img2, img3];
+    let current = 0;
 
-      function toggleImage() {
-        imgElement.src = (current === 1) ? img2 : img1;
-        current = (current === 1) ? 2 : 1;
-      }
+    function toggleImage() {
+      current = (current + 1) % images.length;
+      imgElement.src = images[current];
+    }
 
-      setInterval(toggleImage, 5000);
-    };
+    // Set the initial image
+    imgElement.src = images[current];
+
+    // Change image every 5 seconds
+    setInterval(toggleImage, 5000);
+  };
+
+
 typeWord(); // Start the animation
 </script>
           <!-- <h3 class="temp4" style="font-family:Vina Sans;font-weight:normal;">My Profile</h3> -->
