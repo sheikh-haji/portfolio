@@ -187,7 +187,21 @@ function deleteWord() {
     setTimeout(typeWord, 500); // Wait before typing the next word
   }
 }
+ window.onload = function () {
+      const imgElement = document.getElementById("my-img");
 
+      const img1 = "images/sheikh11.png";
+      const img2 = "images/sheikh4.png";
+
+      let current = 1;
+
+      function toggleImage() {
+        imgElement.src = (current === 1) ? img2 : img1;
+        current = (current === 1) ? 2 : 1;
+      }
+
+      setInterval(toggleImage, 5000);
+    };
 typeWord(); // Start the animation
 </script>
           <!-- <h3 class="temp4" style="font-family:Vina Sans;font-weight:normal;">My Profile</h3> -->
@@ -221,7 +235,7 @@ typeWord(); // Start the animation
             <img class="Sirv image-main" src="hmages/sheikh4.png" data-src="images/sheikh4.png">
             <img class="Sirv image-hover" data-src="images/sheikh11.png">
           </div> -->
-          <img id="my-img" src="images/sheikh11.png" height="auto" width="70%" onmouseover="hover(this);" onmouseout="unhover(this);" />
+          <img id="my-img" src="images/sheikh11.png" height="auto" width="70%"  />
         </div>
 
 
